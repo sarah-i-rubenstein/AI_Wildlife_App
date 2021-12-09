@@ -18,8 +18,8 @@ This flow:
 
 <h2>1: Call flow in Power Apps</h2>
 (flow must be created to do this)
-Assign a variable to the result: 
+Assign a variable to the result: <br> 
 Set(result,NameOfYourFlow.Run(varRecentID));
-- pass the ID of your image in blob storage
+<br> - pass the ID of your image in blob storage
 
 
