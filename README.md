@@ -3,7 +3,7 @@
 This project is able to identify the animal in a picture taken or uploaded by the user. The app was created using Power Apps and Power Automate. It uses the Microsoft AI for Earth API to identify animals.
 
 <h1>Power Automate Flow</h1>
-
+Note: The first and last steps must be done in Power Apps
 <h2>Overview:</h2>
 ![Powerapps](https://user-images.githubusercontent.com/44957401/145456603-fad9c1e8-bf19-45ba-af8f-76bc154e8188.PNG)
 
@@ -16,6 +16,7 @@ This flow:
 5. Parses the JSON respons
 6. Sets the prediction and confidence variables
 7. Responds to the flow with the prediction and confidence (as strings) 
+8. Set variables in Power Apps
 
 <h2>1: Call flow in Power Apps</h2>
 (flow must be created to do this) <br>
@@ -142,7 +143,23 @@ Schema:
     "type": "object"
 }
 
+<h2>6: Set prediction and confidence variables</h2>
 
+![setVariables](https://user-images.githubusercontent.com/44957401/145458949-e10370ff-2084-4251-8a5f-dadc42c8c926.png)
 
+(variables must be set in a loop, but we're only sending one image at a time, so the loop will always run once)
 
+<h2>7: Respond to flow </h2>
+
+![respond](https://user-images.githubusercontent.com/44957401/145459157-b051bb4d-3cf6-4026-b9e7-449bc82ef7d9.png)
+
+<h2>8: Set variables in Power Apps </h2>
+
+//stores identification <br>
+Set(identification,result.identification); <br>
+
+//stores confidence <br>
+Set(confidence,result.confidence); <br>
+
+You can now use the variables anywhere in the app.
 
