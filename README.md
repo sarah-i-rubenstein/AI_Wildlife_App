@@ -4,8 +4,8 @@ This project is able to identify the animal in a picture taken or uploaded by th
 
 <h1>Power Automate Flow</h1>
 
-Overview:
-![IMG-5703](https://user-images.githubusercontent.com/44957401/145454457-1e1be652-d33b-403e-bc47-d735b69f3416.jpg)
+<h2>Overview:<h2>
+![Powerapps](https://user-images.githubusercontent.com/44957401/145456392-fc5289d3-f50d-42d1-a621-e1ea3209b93c.PNG)
 
 This flow:
 1. Takes the blob ID of the image from Power Apps
@@ -17,9 +17,9 @@ This flow:
 7. Responds to the flow with the prediction and confidence (as strings) 
 
 <h2>1: Call flow in Power Apps</h2>
-(flow must be created to do this)
+(flow must be created to do this) <br>
 Assign a variable to the result: <br> 
-Set(result,NameOfYourFlow.Run(varRecentID));
+Set(result, NameOfYourFlow.Run(varRecentID));
 <br> - pass the ID of your image in blob storage
 
 
