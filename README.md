@@ -2,6 +2,29 @@
 
 This project is able to identify the animal in a picture taken or uploaded by the user. The app was created using Power Apps and Power Automate. It uses the Microsoft AI for Earth API to identify animals.
 
+Resources you will need to recreate:
+1. Microsoft Power Apps
+2. Microsoft Power Automate
+3. A Microsoft AI for Earth API Key
+4. (optional) the Microsoft Azure Storage Explorer (free download)
+
+The logic flow of this project:
+1. Send Photo taken/uploaded in Power Apps to Azure blob storage
+2. Send ID of blob to Power Automate flow (which calls the Microsoft AI for Earth API)
+3. Recieve the identification and confidence in Power App and display
+
+<h1>Add Photo to Blob Storage</h1>
+We did this using a premuim Power App connector
+![data](https://user-images.githubusercontent.com/44957401/145462733-10178a22-ab93-4fd8-bb15-0d8eaf227d0c.png)
+To create this connection...
+1. Select "Add Data" in the Power Apps "Data" section
+2. Enter the specified values, such as storage account name and primary key (you can get both of these values in the Microsoft Azure Storage Explorer)
+3. Add photo from camera/upload to blob storage: 
+<br> Set(varRecentID, Text(Round(Rand() *1000000,0), "[$-en]000#"));
+<br> AzureBlobStorage.CreateFile("nameOfContainer", varRecentID, Camera1.Stream); 
+<br> <br>
+...this ID will be sent to a Power Automate Flow
+
 <h1>Power Automate Flow</h1>
 Note: The first and last steps must be done in Power Apps
 <h2>Overview:</h2>
