@@ -5,7 +5,7 @@ This project is able to identify the animal in a picture taken or uploaded by th
 <h1>Power Automate Flow</h1>
 
 <h2>Overview:</h2>
-![Powerapps](https://user-images.githubusercontent.com/44957401/145456392-fc5289d3-f50d-42d1-a621-e1ea3209b93c.PNG)
+![Powerapps](https://user-images.githubusercontent.com/44957401/145456603-fad9c1e8-bf19-45ba-af8f-76bc154e8188.PNG)
 
 
 This flow:
@@ -22,5 +22,127 @@ This flow:
 Assign a variable to the result: <br> 
 Set(result, NameOfYourFlow.Run(varRecentID));
 <br> - pass the ID of your image in blob storage
+
+<h2>2: Create a variable for ID, identification, and confidence in Power Automate</h2>
+
+![powerapp2](https://user-images.githubusercontent.com/44957401/145456812-cbf3aaf4-e063-4984-9381-cd7448d73bbb.png)
+
+<h2>3: Get the blob image from Azure Blob storage</h2>
+
+![Screenshot 2021-12-09 124633](https://user-images.githubusercontent.com/44957401/145457081-086eb165-b842-4580-b646-46be774c0735.png)
+
+<h2>4: Send image to API </h2>
+
+![apishot](https://user-images.githubusercontent.com/44957401/145457549-12800892-4723-4afc-85e1-7ddb1a1f83a2.png)
+
+<h2>5: Parse JSON </h2>
+
+![json](https://user-images.githubusercontent.com/44957401/145457709-ee84ce6f-b624-4a0f-ac72-1916f9fd3324.png)
+
+Schema:
+
+{
+    "properties": {
+        "bboxes": {
+            "items": {
+                "properties": {
+                    "confidence": {
+                        "type": "number"
+                    },
+                    "x_max": {
+                        "type": "number"
+                    },
+                    "x_min": {
+                        "type": "number"
+                    },
+                    "y_max": {
+                        "type": "number"
+                    },
+                    "y_min": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "confidence",
+                    "x_max",
+                    "x_min",
+                    "y_max",
+                    "y_min"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "predictions": {
+            "items": {
+                "properties": {
+                    "class": {
+                        "type": "string"
+                    },
+                    "class_common": {
+                        "type": "string"
+                    },
+                    "confidence": {
+                        "type": "number"
+                    },
+                    "family": {
+                        "type": "string"
+                    },
+                    "family_common": {
+                        "type": "string"
+                    },
+                    "genus": {
+                        "type": "string"
+                    },
+                    "genus_common": {
+                        "type": "string"
+                    },
+                    "kingdom": {
+                        "type": "string"
+                    },
+                    "kingdom_common": {
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "string"
+                    },
+                    "order_common": {
+                        "type": "string"
+                    },
+                    "phylum": {
+                        "type": "string"
+                    },
+                    "phylum_common": {
+                        "type": "string"
+                    },
+                    "species": {
+                        "type": "string"
+                    },
+                    "species_common": {
+                        "type": "string"
+                    },
+                    "subphylum": {
+                        "type": "string"
+                    },
+                    "subphylum_common": {
+                        "type": "string"
+                    },
+                    "subspecies": {
+                        "type": "string"
+                    },
+                    "subspecies_common": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+
+
+
 
 
