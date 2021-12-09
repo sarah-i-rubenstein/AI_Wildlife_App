@@ -17,8 +17,9 @@ The logic flow of this project:
 We did this using a premuim Power App connector
 <img src="https://user-images.githubusercontent.com/44957401/145462733-10178a22-ab93-4fd8-bb15-0d8eaf227d0c.png">
 To create this connection...
-1. Select "Add Data" in the Power Apps "Data" section
-2. Enter the specified values, such as storage account name and primary key (you can get both of these values in the Microsoft Azure Storage Explorer)
+<br>
+1. Select "Add Data" in the Power Apps "Data" section <br>
+2. Enter the specified values, such as storage account name and primary key (you can get both of these values in the Microsoft Azure Storage Explorer) <br>
 3. Add photo from camera/upload to blob storage: 
 <br> Set(varRecentID, Text(Round(Rand() *1000000,0), "[$-en]000#"));
 <br> AzureBlobStorage.CreateFile("nameOfContainer", varRecentID, Camera1.Stream); 
