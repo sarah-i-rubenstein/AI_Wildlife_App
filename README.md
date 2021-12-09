@@ -5,7 +5,7 @@ This project is able to identify the animal in a picture taken or uploaded by th
 <h1>Power Automate Flow</h1>
 Note: The first and last steps must be done in Power Apps
 <h2>Overview:</h2>
-![Powerapps](https://user-images.githubusercontent.com/44957401/145456603-fad9c1e8-bf19-45ba-af8f-76bc154e8188.PNG)
+<img src="https://user-images.githubusercontent.com/44957401/145456603-fad9c1e8-bf19-45ba-af8f-76bc154e8188.PNG">
 
 
 This flow:
