@@ -15,7 +15,7 @@ The logic flow of this project:
 
 <h1>Add Photo to Blob Storage</h1>
 We did this using a premuim Power App connector
-![data](https://user-images.githubusercontent.com/44957401/145462733-10178a22-ab93-4fd8-bb15-0d8eaf227d0c.png)
+<img src="https://user-images.githubusercontent.com/44957401/145462733-10178a22-ab93-4fd8-bb15-0d8eaf227d0c.png">
 To create this connection...
 1. Select "Add Data" in the Power Apps "Data" section
 2. Enter the specified values, such as storage account name and primary key (you can get both of these values in the Microsoft Azure Storage Explorer)
