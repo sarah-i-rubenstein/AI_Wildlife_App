@@ -4,8 +4,9 @@ This project is able to identify the animal in a picture taken or uploaded by th
 
 <h1>Power Automate Flow</h1>
 
-<h2>Overview:<h2>
+<h2>Overview:</h2>
 ![Powerapps](https://user-images.githubusercontent.com/44957401/145456392-fc5289d3-f50d-42d1-a621-e1ea3209b93c.PNG)
+
 
 This flow:
 1. Takes the blob ID of the image from Power Apps
