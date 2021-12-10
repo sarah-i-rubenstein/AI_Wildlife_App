@@ -6,7 +6,7 @@ Resources you will need to recreate:
 1. Microsoft Power Apps
 2. Microsoft Power Automate
 3. A Microsoft AI for Earth API Key
-4. (optional) the Microsoft Azure Storage Explorer (free download)
+4. (optional) the Microsoft Azure Storage Explorer (<a href="https://azure.microsoft.com/en-us/features/storage-explorer/#overview">free download</a>)
 
 The logic flow of this project:
 1. Send Photo taken/uploaded in Power Apps to Azure blob storage
