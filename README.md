@@ -24,7 +24,7 @@ To create this connection...
 </ol>
 ```
 Set(varRecentID, Text(Round(Rand() *1000000,0), "[$-en]000#"));
-AzureBlobStorage.CreateFile("nameOfContainer", varRecentID, Camera1.Stream); 
+AzureBlobStorage.CreateFile("nameOfContainer", varRecentID, Camera1.Stream);  
 ```
 <br> <br>
 ...this ID will be sent to a Power Automate Flow
