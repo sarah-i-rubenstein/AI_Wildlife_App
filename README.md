@@ -22,10 +22,8 @@ To create this connection...
 <li>Enter the specified values, such as storage account name and primary key (you can get both of these values in the Microsoft Azure Storage Explorer)</li>
     <li>Add photo from camera/upload to blob storage:</li>
 </ol>
-```
-Set(varRecentID, Text(Round(Rand() *1000000,0), "[$-en]000#"));
+Set(varRecentID, Text(Round(Rand() *1000000,0), "[$-en]000#")); <br>
 AzureBlobStorage.CreateFile("nameOfContainer", varRecentID, Camera1.Stream);  
-```
 <br> <br>
 ...this ID will be sent to a Power Automate Flow
 
@@ -47,9 +45,9 @@ This flow:
 <h2>1: Call flow in Power Apps</h2>
 (flow must be created to do this) <br>
 Assign a variable to the result: <br> 
-`
+```
 Set(result, NameOfYourFlow.Run(varRecentID));
-`
+```
 <br> - pass the ID of your image in blob storage
 
 <h2>2: Create a variable for ID, identification, and confidence in Power Automate</h2>
@@ -190,3 +188,6 @@ Set(identification,result.identification);
 //stores confidence
 Set(confidence,result.confidence);
 ```
+
+<h2>Contact Information</h2>
+If you have any questions please contact me at sarah.i.rubenstein@gmail.com.
