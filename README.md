@@ -187,5 +187,4 @@ Set(identification,result.identification);
 //stores confidence
 Set(confidence,result.confidence);
 ```
-You can now use the variables anywhere in the app.
 
