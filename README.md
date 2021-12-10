@@ -45,10 +45,12 @@ This flow:
 <h2>1: Call flow in Power Apps</h2>
 (flow must be created to do this) <br>
 Assign a variable to the result: <br> 
-```
+
 Set(result, NameOfYourFlow.Run(varRecentID));
-```
-<br> - pass the ID of your image in blob storage
+
+<ul>
+    <li>pass the ID of your image in blob storage</li>
+</ul>
 
 <h2>2: Create a variable for ID, identification, and confidence in Power Automate</h2>
 
