@@ -192,4 +192,4 @@ Set(confidence,result.confidence);
 ```
 
 <h2>Contact Information</h2>
-If you have any questions please contact me at sarah.i.rubenstein@gmail.com.
+If you have any questions please contact me at <a href="sarah.i.rubenstein@gmail.com">sarah.i.rubenstein@gmail.com</a>.
