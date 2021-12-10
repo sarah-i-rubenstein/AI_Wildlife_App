@@ -66,7 +66,7 @@ Set(result, NameOfYourFlow.Run(varRecentID));
 ![json](https://user-images.githubusercontent.com/44957401/145457709-ee84ce6f-b624-4a0f-ac72-1916f9fd3324.png)
 
 Schema:
-
+```
 {
     "properties": {
         "bboxes": {
@@ -167,7 +167,7 @@ Schema:
     },
     "type": "object"
 }
-
+```
 <h2>6: Set prediction and confidence variables</h2>
 
 ![setVariables](https://user-images.githubusercontent.com/44957401/145458949-e10370ff-2084-4251-8a5f-dadc42c8c926.png)
