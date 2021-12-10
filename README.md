@@ -22,10 +22,10 @@ To create this connection...
 <li>Enter the specified values, such as storage account name and primary key (you can get both of these values in the Microsoft Azure Storage Explorer)</li>
     <li>Add photo from camera/upload to blob storage:</li>
 </ol>
-```
+`
 Set(varRecentID, Text(Round(Rand() *1000000,0), "[$-en]000#"));
 AzureBlobStorage.CreateFile("nameOfContainer", varRecentID, Camera1.Stream);  
-```
+`
 <br> <br>
 ...this ID will be sent to a Power Automate Flow
 
@@ -180,11 +180,10 @@ Schema:
 ![respond](https://user-images.githubusercontent.com/44957401/145459157-b051bb4d-3cf6-4026-b9e7-449bc82ef7d9.png)
 
 <h2>8: Set variables in Power Apps </h2>
-
-```
+`
 //stores identification
 Set(identification,result.identification);
 
 //stores confidence
 Set(confidence,result.confidence);
-```
+`
