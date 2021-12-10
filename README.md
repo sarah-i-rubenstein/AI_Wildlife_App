@@ -180,6 +180,7 @@ Schema:
 ![respond](https://user-images.githubusercontent.com/44957401/145459157-b051bb4d-3cf6-4026-b9e7-449bc82ef7d9.png)
 
 <h2>8: Set variables in Power Apps </h2>
+
 ```
 //stores identification
 Set(identification,result.identification);
