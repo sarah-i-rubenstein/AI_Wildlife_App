@@ -34,7 +34,6 @@ Note: The first and last steps must be done in Power Apps
 <h2>Overview:</h2>
 <img src="https://user-images.githubusercontent.com/44957401/145456603-fad9c1e8-bf19-45ba-af8f-76bc154e8188.PNG">
 
-
 This flow:
 1. Takes the blob ID of the image from Power Apps
 2. Creates a variable for the ID, and empty variables for the identification and confidence
