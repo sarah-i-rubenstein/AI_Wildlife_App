@@ -203,18 +203,20 @@ Overview:
 3. Obtain longitude and lattitude in Power Apps and pass them to flow
 
 <h2>1: Add variables</h2>
-![Screenshot 2021-12-11 001048](https://user-images.githubusercontent.com/44957401/145666337-0f29b5c2-ae60-4549-aa83-95e974ba585f.png)
+<img src="https://user-images.githubusercontent.com/44957401/145666337-0f29b5c2-ae60-4549-aa83-95e974ba585f.png">
 <h2>2: Insert Entity into Azure table</h2>
 
 ![Screenshot 2021-12-11 001215](https://user-images.githubusercontent.com/44957401/145666368-9f9881f4-c9e7-4291-952d-036db678cd7f.png)
-Note: This should be done just before responding to Power Apps
+<br>Note: This should be done just before responding to Power Apps
 
-<h2>Pass longitude and lattitude from Power Apps</h2>
+<h2>Pass longitude and latitude from Power Apps</h2>
 Obtain the coordinates with this code:
+
 ```
+//get latitude
 Set(Latitude, Location.Latitude);
+//get longitude
 Set(Longitude, Location.Longitude);
 ```
-
 <h2>Contact Information</h2>
 If you have any questions please contact me at <a href = "mailto: sarah.i.rubenstein@gmail.com">sarah.i.rubenstein@gmail.com</a>.
