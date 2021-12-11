@@ -2,6 +2,8 @@
 
 This project is able to identify the animal in a picture taken or uploaded by the user. The app was created using Power Apps and Power Automate. It uses the Microsoft AI for Earth API to identify animals.
 
+The project also stores the user's image, identification, and location in an Azure table. This feature will be explained in the second half of the README, so if you do not wish to implement it, stop before the "Azure table storage" section. 
+
 Resources you will need to recreate:
 1. Microsoft Power Apps
 2. Microsoft Power Automate
@@ -11,7 +13,8 @@ Resources you will need to recreate:
 The logic flow of this project:
 1. Send Photo taken/uploaded in Power Apps to Azure blob storage
 2. Send ID of blob to Power Automate flow (which calls the Microsoft AI for Earth API)
-3. Recieve the identification and confidence in Power App and display
+3. (optional) Store user's image and location as well as the identification in an Azure table.
+4. Recieve the identification and confidence in Power App and display
 
 <h1>Add Photo to Blob Storage</h1>
 We did this using a premuim Power App connector
@@ -189,6 +192,28 @@ Set(identification,result.identification);
 
 //stores confidence
 Set(confidence,result.confidence);
+```
+
+<h1>Azure Table Storage</h1>
+If you wish to add the image and location of the user, as well as the identification, to an Azure table, continue below.
+
+Overview:
+1. Add variables for longitude and latitude in Power Automate (concatinate them into one location)
+2. "Insert Entity" into Azure table
+3. Obtain longitude and lattitude in Power Apps and pass them to flow
+
+<h2>1: Add variables</h2>
+![Screenshot 2021-12-11 001048](https://user-images.githubusercontent.com/44957401/145666337-0f29b5c2-ae60-4549-aa83-95e974ba585f.png)
+<h2>2: Insert Entity into Azure table</h2>
+
+![Screenshot 2021-12-11 001215](https://user-images.githubusercontent.com/44957401/145666368-9f9881f4-c9e7-4291-952d-036db678cd7f.png)
+Note: This should be done just before responding to Power Apps
+
+<h2>Pass longitude and lattitude from Power Apps</h2>
+Obtain the coordinates with this code:
+```
+Set(Latitude, Location.Latitude);
+Set(Longitude, Location.Longitude);
 ```
 
 <h2>Contact Information</h2>
