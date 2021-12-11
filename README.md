@@ -209,7 +209,7 @@ Overview:
 ![Screenshot 2021-12-11 001215](https://user-images.githubusercontent.com/44957401/145666368-9f9881f4-c9e7-4291-952d-036db678cd7f.png)
 <br>Note: This should be done just before responding to Power Apps
 
-<h2>Pass longitude and latitude from Power Apps</h2>
+<h2>3: Pass longitude and latitude from Power Apps</h2>
 Obtain the coordinates with this code:
 
 ```
